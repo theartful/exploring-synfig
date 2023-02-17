@@ -9,9 +9,9 @@
 void print_token_tree(int depth, synfig::Token::Handle crawler)
 {
     auto surface_token =
-        crawler.template as<const synfig::rendering::Surface::Token>();
+        crawler.template as<synfig::rendering::Surface::Token>();
     auto task_token =
-        crawler.template as<const synfig::rendering::Task::Token>();
+        crawler.template as<synfig::rendering::Task::Token>();
     auto mode_token = crawler.template as<const synfig::rendering::ModeToken>();
 
     for (int i = 0; i < depth; i++)
